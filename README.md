@@ -1,73 +1,21 @@
 # mini-calculadora-python
-"Mini calculadora em Python com menu interativo e validação de entrada"
 
-# 🔢 Mini Calculadora em Python
+Quadrado, cubo e raiz quadrada, com validação de entrada e rejeição de raiz real negativa.
 
-Projeto simples desenvolvido em Python com menu interativo.
+## Executar
 
-## 🚀 Funcionalidades
-- Calcular quadrado
-- Calcular cubo
-- Calcular raiz quadrada
-- Menu interativo
-- Validação de entrada
-
-## 🛠 Tecnologias
-- Python 3
-
-## ▶️ Como executar
+Pré-requisito: Python 3. Execute na pasta do repositório:
 
 ```bash
 python calculadora.py
+```
 
+No Windows, para C, execute `calculadora.exe` após compilar. Os programas Python usam apenas a biblioteca padrão.
 
-def quadrado(n):
-    return n ** 2
+## Escopo
 
-def cubo(n):
-    return n ** 3
+Projeto de estudo de lógica de programação, funções e validação de dados. Os dados são mantidos apenas durante a execução. O código que antes aparecia dentro do README foi transformado em um arquivo de origem executável; versões anteriores continuam no histórico Git.
 
-def raiz(n):
-    if n < 0:
-        print("Não existe raiz real para número negativo.")
-        return None
-    return n ** 0.5
+## Evidência
 
-
-def ler_numero():
-    while True:
-        try:
-            return float(input("\nDigite um número: "))
-        except ValueError:
-            print("Entrada inválida. Tente novamente.")
-
-
-def menu():
-    while True:
-        numero = ler_numero()
-
-        print("\n=== MENU ===")
-        print("1 - Quadrado")
-        print("2 - Cubo")
-        print("3 - Raiz quadrada")
-        print("0 - Sair")
-
-        opcao = input("Escolha: ")
-
-        if opcao == "1":
-            print(f"Quadrado: {quadrado(numero):.2f}")
-        elif opcao == "2":
-            print(f"Cubo: {cubo(numero):.2f}")
-        elif opcao == "3":
-            resultado = raiz(numero)
-            if resultado is not None:
-                print(f"Raiz: {resultado:.2f}")
-        elif opcao == "0":
-            print("Encerrando programa...")
-            break
-        else:
-            print("Opção inválida.")
-
-
-if __name__ == "__main__":
-    menu()
+Um exemplo simples para verificar: calcular a raiz de 9 e obter 3,00.
